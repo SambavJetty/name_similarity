@@ -1,21 +1,18 @@
-📂 Project Structure
-project-root/
-│
-├── main.py               # FastAPI app
-├── venv/                 # Python virtual environment (ignored in git)
-├── requirements.txt      # Project dependencies
-└── README.md             # You're reading this!
+🌟 FastAPI Gemini Name Similarity API
+
+A FastAPI backend that finds similar names using a Google Gemini generative AI model.
+The API uses the google-generativeai Python package for embeddings and similarity search.
 
 📦 Setup Instructions
 1️⃣ Clone the Repository
 git clone <your-repo-url>
 
 2️⃣ Create and Activate a Virtual Environment
-# On Linux/macOS
+# Linux/macOS
 python3 -m venv venv
 source venv/bin/activate
 
-# On Windows
+# Windows
 python -m venv venv
 venv\Scripts\activate
 
@@ -24,32 +21,34 @@ pip install fastapi uvicorn google-generativeai numpy
 
 4️⃣ Configure Gemini API Key
 
-Open main.py and update the following line with your Gemini API key:
+Open main.py and update the below given line with your Gemini API key:
 
 genai.configure(api_key="YOUR_API_KEY_HERE")
-
-
-You can get your API key from 👉 Google MakerSuite
 .
 
 🚦 Running the Server
 uvicorn main:app --reload
 
 
-Runs on: http://127.0.0.1:8000
+The server will run on:
+
+📍 http://127.0.0.1:8000
 
 📡 API Endpoints
-🔍 POST /similar-names
+POST /similar-names
 
-Finds names most similar to a given input name using Gemini Flash Lite.
+Find the most similar names to a given query.
 
 ✅ Request Body
+
 {
   "name": "Githa",
   "top_k": 5
 }
 
+
 🔁 Response
+
 {
   "input": "Githa",
   "best_match": {
