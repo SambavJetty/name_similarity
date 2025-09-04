@@ -19,26 +19,26 @@ A FastAPI backend that finds similar names using Google Gemini generative AI mod
 ### 📦 Installation
 
 1. **Clone the Repository**
-   \`\`\`bash
+   \`\`\`
    git clone <your-repo-url>
    \`\`\`
 
 2. **Create Virtual Environment**
 
    **macOS/Linux:**
-   \`\`\`bash
+   \`\`\`
    python3 -m venv venv
    source venv/bin/activate
    \`\`\`
 
    **Windows:**
-   \`\`\`bash
+   \`\`\`
    python -m venv venv
    venv\Scripts\activate
    \`\`\`
 
 3. **Install Dependencies**
-   \`\`\`bash
+   \`\`\`
    pip install fastapi uvicorn google-generativeai numpy
    \`\`\`
 
@@ -53,7 +53,7 @@ A FastAPI backend that finds similar names using Google Gemini generative AI mod
 
 Start the development server:
 
-\`\`\`bash
+\`\`\`
 uvicorn main:app --reload
 \`\`\`
 
