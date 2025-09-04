@@ -1,57 +1,89 @@
-🌟 FastAPI Gemini Name Similarity API
+# 🌟 FastAPI Gemini Name Similarity API
 
-A FastAPI backend that finds similar names using a Google Gemini generative AI model.
-The API uses the google-generativeai Python package for embeddings and similarity search.
+A FastAPI backend that finds similar names using Google Gemini generative AI model. The API uses the `google-generativeai` Python package for embeddings and similarity search to provide intelligent name matching capabilities.
 
-📦 Setup Instructions
-1️⃣ Clone the Repository
-git clone <your-repo-url>
+## 📋 Features
 
-3️⃣ Install Dependencies
-pip install fastapi uvicorn google-generativeai numpy
+- **AI-Powered Name Matching**: Uses Google Gemini AI for intelligent name similarity detection
+- **RESTful API**: Clean FastAPI endpoints for easy integration
+- **Configurable Results**: Adjustable top-k results for flexible matching
+- **High Performance**: Fast similarity search with numerical scoring
 
-#Create virtual env(macos/linux)
+## 🚀 Quick Start
 
-python3 -m venv venv 
+### Prerequisites
 
-source venv/bin/activate
+- Python 3.8+
+- Google Gemini API key
 
-#Create virtual env(windows)
+### 📦 Installation
 
-python -m venv venv 
+1. **Clone the Repository**
+   \`\`\`bash
+   git clone <your-repo-url>
+   \`\`\`
 
-venv\Scripts\activate
+2. **Create Virtual Environment**
 
-4️⃣ Configure Gemini API Key
+   **macOS/Linux:**
+   \`\`\`bash
+   python3 -m venv venv
+   source venv/bin/activate
+   \`\`\`
 
-Open main.py and update the below given line with your Gemini API key:
+   **Windows:**
+   \`\`\`bash
+   python -m venv venv
+   venv\Scripts\activate
+   \`\`\`
 
-genai.configure(api_key="YOUR_API_KEY_HERE")
-.
+3. **Install Dependencies**
+   \`\`\`bash
+   pip install fastapi uvicorn google-generativeai numpy
+   \`\`\`
 
-🚦 Running the Server
+4. **Configure API Key**
+   
+   Open `main.py` and update the following line with your Gemini API key:
+   \`\`\`python
+   genai.configure(api_key="YOUR_API_KEY_HERE")
+   \`\`\`
+
+## 🚦 Running the Server
+
+Start the development server:
+
+\`\`\`bash
 uvicorn main:app --reload
+\`\`\`
 
+The server will be available at: **http://127.0.0.1:8000**
 
-The server will run on:
+## 📡 API Documentation
 
-📍 http://127.0.0.1:8000
+### Find Similar Names
 
-📡 API Endpoints
-POST /similar-names
+**Endpoint:** `POST /similar-names`
 
-Find the most similar names to a given query.
+Find the most similar names to a given query using AI-powered matching.
 
-✅ Request Body
+#### Request Body
 
+\`\`\`json
 {
   "name": "Githa",
   "top_k": 5
 }
+\`\`\`
 
+| Parameter | Type | Description | Default |
+|-----------|------|-------------|---------|
+| `name` | string | The name to find similarities for | Required |
+| `top_k` | integer | Number of top matches to return | 5 |
 
-🔁 Response
+#### Response
 
+\`\`\`json
 {
   "input": "Githa",
   "best_match": {
