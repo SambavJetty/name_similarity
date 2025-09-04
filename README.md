@@ -7,17 +7,20 @@ The API uses the google-generativeai Python package for embeddings and similarit
 1️⃣ Clone the Repository
 git clone <your-repo-url>
 
-2️⃣ Create and Activate a Virtual Environment
-# Linux/macOS
-python3 -m venv venv
-source venv/bin/activate
-
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
 3️⃣ Install Dependencies
 pip install fastapi uvicorn google-generativeai numpy
+
+#Create virtual env(macos/linux)
+
+python3 -m venv venv 
+
+source venv/bin/activate
+
+#Create virtual env(windows)
+
+python -m venv venv 
+
+venv\Scripts\activate
 
 4️⃣ Configure Gemini API Key
 
