@@ -28,21 +28,25 @@ A FastAPI backend that finds similar names using Google Gemini generative AI mod
    **macOS/Linux:**
    \`\`\`
    python3 -m venv venv
+   \`\`\`
+   \`\`\`
    source venv/bin/activate
    \`\`\`
 
    **Windows:**
    \`\`\`
    python -m venv venv
+   \`\`\`
+   \`\`\`
    venv\Scripts\activate
    \`\`\`
 
-3. **Install Dependencies**
+4. **Install Dependencies**
    \`\`\`
    pip install fastapi uvicorn google-generativeai numpy
    \`\`\`
 
-4. **Configure API Key**
+5. **Configure API Key**
    
    Open `main.py` and update the following line with your Gemini API key:
    \`\`\`python
